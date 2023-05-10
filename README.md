@@ -4,9 +4,10 @@
 JobTracker is an iOS app that helps you track job applications and create customized resumes with ease.
 
 
+
 ## Screenshots
 <p align="center">
-  <img src="https://github.com/HamsterStack/JobTracker/assets/108938294/a3a18812-0da4-4147-878c-79100a0582b3"  >
+  <img src="https://github.com/HamsterStack/JobTracker/assets/108938294/34f829f7-1cbd-488c-ad49-fcbcf68e634c"  >
 <p/>
 
 ## How I built it
