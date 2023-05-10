@@ -14,7 +14,7 @@ Jobs Tab
 <p/>
 
 <p align="center">
-  <img src="https://github.com/HamsterStack/JobTracker/assets/108938294/34f829f7-1cbd-488c-ad49-fcbcf68e634c"  width-"275">
+  <img src="https://github.com/HamsterStack/JobTracker/assets/108938294/34f829f7-1cbd-488c-ad49-fcbcf68e634c"  width-"500">
 <p/>
 
 ## How I built it
