@@ -8,14 +8,34 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+  @StateObject var vm = JobsViewModel()
+  var body: some View {
+
+    TabView {
+      ListView(vm: vm)
+        .tabItem {
+          Image(systemName: "house.fill")
+          Text("Home")
         }
-        .padding()
+      
+      if #available(iOS 16.0, *){
+        ResumeView(vm: vm)
+          .tabItem {
+            Image(systemName: "doc.plaintext")
+            Text("Resume")
+          }
+      }
+      else{
+        Text("Resume Maker not available on your iOS version yet!")
+          .tabItem{
+            Image(systemName: "doc.plaintext")
+            Text("Resume")
+          }
+      }
+      
+      
+    }
+    .tint(.blue)
     }
 }
 
