@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import NaturalLanguage
 
 
 struct NewResumeView: View {
@@ -190,8 +191,19 @@ struct NewResumeView: View {
                 TextField("Bullet Point", text:$jobPoint)
                 Button("Add Point"){
                   if(!jobPoint.isEmpty){
+                    //using embeddings to find neighbors and similar words
+                    let words = jobPoint.components(separatedBy: " ")
+                    for word in words{
+                      if let embedding = NLEmbedding.wordEmbedding(for: .english){
+                        embedding.enumerateNeighbors(for: word , maximumCount: 1) { neighbor, distance in
+                               print("\(neighbor): \(distance.description) for \(word)")
+                               return true
+                           }
+                      }
+                    }
                     jobPoints.append(jobPoint)
                     jobPoint = ""
+                    
                   }
                 }
                 .foregroundColor(.blue)
