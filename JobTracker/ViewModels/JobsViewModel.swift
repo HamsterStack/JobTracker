@@ -7,6 +7,8 @@
 
 import Foundation
 
+/// Did this in time crunch for Swift Student Challenge and  now looking at it obviously a lot I can improve and I might fix up some of this code when I have free time outside of my internships. i.e, obviously bad idea to store all this info in UserDefaults and lots more stuff I only did because I was in a time crunch.
+
 class JobsViewModel: ObservableObject {
   
   @Published var resumes = [Resume](){
